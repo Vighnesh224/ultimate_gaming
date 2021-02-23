@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "467180648134",
+    "firebase_url": "https://ultimategaming-42955.firebaseio.com",
+    "project_id": "ultimategaming-42955",
+    "storage_bucket": "ultimategaming-42955.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467180648134:android:2a59c0a5aeafc2677689c7",
+        "android_client_info": {
+          "package_name": "com.prisminfoways.ultimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467180648134-8uasq98h1fcujforn8toos9pfu12dpn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXEgiQq7NsfVxbcZe3T5bbBkySQ4TXTCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467180648134-8uasq98h1fcujforn8toos9pfu12dpn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

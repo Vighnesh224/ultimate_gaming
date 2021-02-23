@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mk Gaming</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PUBG_Mobile">PUBG Mobile</string>
+    <!--<string name="game_id">1234567</string>-->
+    <string name="game_id">3161787</string>
+
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--<string name="onesignal">6f416e3a-3d47-4b0f-8383-422d9fdac81</string>-->
+
+</resources>

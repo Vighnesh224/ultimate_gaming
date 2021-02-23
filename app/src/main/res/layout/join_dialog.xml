@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/txtJoinDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="Select amount type to join match"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/rg_type"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.prisminfoways.ultimate.customview.CTextView
+                        android:visibility="gone"
+                        android:id="@+id/totalcoins"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@drawable/join_bg_dialog"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="0 (Coins)"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <com.prisminfoways.ultimate.customview.CTextView
+                        android:id="@+id/totalRs"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/join_bg_dialog"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="0 (Rs)"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:visibility="gone"
+                        android:id="@+id/rb_coin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@drawable/join_bg_dialog"
+                        android:checked="true"
+                        android:gravity="center" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_4sdp"
+                        android:visibility="gone"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_rs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/join_bg_dialog"
+                        android:textColor="@color/black"
+                        android:checked="true"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <!--
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone">
+
+                                            <RadioButton
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:checked="true"
+                                                android:gravity="center"
+                                                android:text="Coins"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sdp" />
+
+                                            <TextView
+                                                android:id="@+id/total_coins"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_10sdp"
+                                                android:gravity="center"
+                                                android:text="(2000)"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sdp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <RadioButton
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Rupees"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sdp" />
+
+                                            <TextView
+                                                android:id="@+id/total_rs"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="@dimen/_10sdp"
+                                                android:gravity="center"
+                                                android:text="(200)"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sdp" />
+
+                                        </LinearLayout>
+                    -->
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:id="@+id/edt_pubg_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:hint="Enter your game Name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/dark_gray" />
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:visibility="gone"
+                    android:id="@+id/edt_pubg_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:hint="Enter your partner game Name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/dark_gray" />
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:visibility="gone"
+                    android:id="@+id/edt_pubg_name3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:hint="Enter your partner game Name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/dark_gray" />
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:visibility="gone"
+                    android:id="@+id/edt_pubg_name4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:hint="Enter your partner game Name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/dark_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Make sure you enter your PUBG name not ID."
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/black"/>
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• To get PUBG username, Opne PUBG Mobile > Go to Profile. You can copy your PUBG username  from there."
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/black"/>
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• By joining match, You accept the Fair Play Policy."
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center">
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spectect"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:text="Cancel"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp" />
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:id="@+id/btn_join"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_matchjoin"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:text="Join"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

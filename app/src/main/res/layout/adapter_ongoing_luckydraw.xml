@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_2sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imgBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pubg_place" />
+
+
+                <RelativeLayout
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:layout_below="@+id/imgBanner"
+                    android:id="@+id/war_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/info"
+                        android:layout_toRightOf="@+id/icon"
+                        android:orientation="vertical">
+
+                        <com.prisminfoways.ultimate.customview.CTextViewBold
+                            android:id="@+id/war_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Solo battle War"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <com.prisminfoways.ultimate.customview.CTextView
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:id="@+id/txtRegsDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Registration closed."
+                            android:textColor="#757575"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/info"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/info"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_below="@+id/war_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_toLeftOf="@+id/is_join"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/spot_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:progressDrawable="@drawable/green_progress_drawable"
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:max="100"
+                            android:indeterminate="false"
+                            android:progress="0" />
+
+                        <RelativeLayout
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.prisminfoways.ultimate.customview.CTextView
+                                android:id="@+id/txtSpotDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Only 32 spots left"
+                                android:textColor="#757575"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.prisminfoways.ultimate.customview.CTextView
+                                android:id="@+id/txtSpot"
+                                android:layout_alignParentEnd="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100/100"
+                                android:textColor="#757575"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <com.prisminfoways.ultimate.customview.CTextView
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/is_join"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_lucky_join"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="REGISTER"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_14sdp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FC0F3A</color>
+    <color name="colorPrimaryDark">#FC0F3A</color>
+    <color name="colorAccent">#FC0F3A</color>
+
+    <color name="color_white">#ffffff</color>
+    <color name="color_transparent">#00ffffff</color>
+    <color name="colorgray">#a9a9a9</color>
+    <color name="color_gray">#ececec</color>
+    <color name="dark_gray">#979797</color>
+    <color name="light_gray">#cacaca</color>
+
+    <color name="background">#dddddd</color>
+
+    <color name="app_bg_color">#F7F7F7</color>
+    <color name="login_btn">#faa339</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#181818</color>
+
+    <color name="join_bg">#6996ff</color>
+    <color name="unselected_tab_color">#818181</color>
+
+    <color name="join_progress_bg">#FFE082</color>
+    <color name="join_progress_bg1">#FFE082</color>
+    <color name="txt_bg_email">#fdf0da</color>
+
+    <color name="blackPrimaryDark">#282828</color>
+    <color name="blackPrimary">#2E2E2E</color>
+    <color name="blackPrimaryLight">#8F8F8F</color>
+
+    <color name="selectTab">#ff0132</color>
+
+    <color name="selectgreen">#32D353</color>
+
+    <color name="selectblue">#3B96BA</color>
+    <color name="shimmer_default_clr">#dddddd</color>
+
+</resources>

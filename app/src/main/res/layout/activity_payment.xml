@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.prisminfoways.ultimate.activity.PaymentActivity">
+
+        <RelativeLayout
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/indicator"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorName="BallPulseIndicator" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/lbl_stauts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/indicator"
+                android:layout_centerHorizontal="true"
+                android:text="Loading"
+                android:textSize="@dimen/_16sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_add_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/success" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/title_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Thank you"
+                android:textAllCaps="true"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/status_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Your balance successfully added into your wallet"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/check_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/login_btn"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_25sdp"
+                android:paddingRight="@dimen/_25sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="Check Wallet"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

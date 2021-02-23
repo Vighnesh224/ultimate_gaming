@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg_color"
+        tools:context="com.prisminfoways.ultimate.activity.AddMoneyActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/img_back" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/txtmultigame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:text="Add Money"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_main_header"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp">
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/txt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Enter Amount To Add Money Into Your Wallet"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/_16sdp" />
+
+            <com.prisminfoways.ultimate.customview.CEditText
+                android:visibility="gone"
+                android:id="@+id/edt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_amount"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/text_bg_email"
+                android:hint="Enter Amount"
+                android:inputType="number"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/statistic_bg"
+                android:paddingBottom="@dimen/_7sdp"
+                android:paddingLeft="@dimen/_35sdp"
+                android:paddingRight="@dimen/_35sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:text="Add Money"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_below="@+id/txt_amount"
+                android:id="@+id/recycle_addmoney_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

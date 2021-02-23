@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardBackgroundColor="@color/white"
+          app:cardElevation="@dimen/_2sdp"
+          app:cardCornerRadius="@dimen/_5sdp"
+          app:cardUseCompatPadding="true">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <RelativeLayout
+                  android:id="@+id/coin_history"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/_10sdp">
+
+                  <LinearLayout
+                      android:layout_toLeftOf="@+id/llCoin"
+                      android:id="@+id/llCoinDetails"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+                      <com.prisminfoways.ultimate.customview.CTextView
+                          android:id="@+id/title"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/_16sdp" />
+
+                      <com.prisminfoways.ultimate.customview.CTextView
+                          android:id="@+id/time"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@+id/title"
+                          android:layout_marginTop="@dimen/_3sdp"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/_12sdp" />
+
+                  </LinearLayout>
+
+                  <LinearLayout
+
+                      android:id="@+id/llCoin"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:orientation="horizontal">
+
+                      <com.prisminfoways.ultimate.customview.CTextView
+                          android:id="@+id/coins"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:textColor="@color/selectTab"
+                          android:textSize="@dimen/_16sdp" />
+
+                      <ImageView
+                          android:layout_marginLeft="@dimen/_5sdp"
+                          android:id="@+id/img_coin"
+                          android:layout_width="@dimen/_15sdp"
+                          android:layout_height="@dimen/_15sdp"
+                          android:layout_gravity="center"
+                          android:src="@drawable/img_coin" />
+
+                  </LinearLayout>
+
+                  <com.prisminfoways.ultimate.customview.CTextView
+                      android:layout_below="@+id/llCoin"
+                      android:id="@+id/transaction_status"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:text=""
+                      android:textSize="@dimen/_12sdp"
+                      android:textColor="@color/unselected_tab_color"/>
+
+              </RelativeLayout>
+
+              <View
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/_1sdp"
+                  android:layout_below="@+id/coin_history"
+                  android:background="@color/color_gray" />
+
+          </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

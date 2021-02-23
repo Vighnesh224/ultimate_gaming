@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.CashoutActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/img_back" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/txtmultigame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:text="Redeem"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_main_header"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@color/colorPrimary" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_3sdp">
+
+                <com.flyco.tablayout.CommonTabLayout
+                    android:id="@+id/redeem_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/color_white"
+                    tl:tl_iconGravity="TOP"
+                    tl:tl_iconHeight="@dimen/_40sdp"
+                    tl:tl_iconMargin="0dp"
+                    tl:tl_iconWidth="@dimen/_80sdp"
+                    tl:tl_indicator_anim_enable="true"
+                    tl:tl_indicator_bounce_enable="true"
+                    tl:tl_indicator_color="@color/colorPrimary"
+                    tl:tl_indicator_corner_radius="3.5dp"
+                    tl:tl_indicator_gravity="BOTTOM"
+                    tl:tl_indicator_height="3dp"
+                    tl:tl_indicator_margin_bottom="15dp"
+                    tl:tl_indicator_margin_top="1dp"
+                    tl:tl_indicator_width="@dimen/_20sdp"
+                    tl:tl_textAllCaps="true"
+                    tl:tl_textBold="BOTH"
+                    tl:tl_textSelectColor="#fff"
+                    tl:tl_textUnselectColor="#7fff"
+                    tl:tl_textsize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_tab"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <com.prisminfoways.ultimate.customview.CTextView
+                    android:id="@+id/msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send to Paytm"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/text_bg"
+                    android:hint="Enter Paytm Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.prisminfoways.ultimate.customview.CEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/text_bg"
+                    android:hint="Enter Amount"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_spinner"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/amount_spinner"
+                        style="?android:attr/spinnerDropDownItemStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:dropDownSelector="@color/colorgray"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/share_btn_bg"
+                    android:minHeight="@dimen/_40sdp"
+                    android:orientation="horizontal">
+
+                    <com.prisminfoways.ultimate.customview.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

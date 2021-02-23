@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg_color"
+        tools:context=".activity.WalletActivity">
+
+        <RelativeLayout
+            android:id="@+id/rel_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/img_back" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/txtmultigame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:text="Wallet"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <com.prisminfoways.ultimate.customview.CTextView
+                android:id="@+id/add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/statistic_bg"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="Add Money"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_main_header"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/tab_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/transaction_rs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <com.prisminfoways.ultimate.customview.CTextView
+                            android:id="@+id/transaction_rs_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="Rupees"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <com.prisminfoways.ultimate.customview.CTextView
+                            android:id="@+id/total_rupees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:text="0"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/_16sdp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/app_bg_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/transaction_coin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <com.prisminfoways.ultimate.customview.CTextView
+                            android:id="@+id/transaction_coin_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="Coin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <com.prisminfoways.ultimate.customview.CTextView
+                            android:id="@+id/total_coins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tab_main"
+                    android:layout_marginTop="@dimen/_10sdp" />
+
+                <!--
+                                <android.support.design.widget.TabLayout
+                                    android:id="@+id/tabLayout_main"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp" />
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/mainPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                -->
+
+                <!--
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/app_bg_color"
+                                    app:cardCornerRadius="@dimen/_5sdp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_15sdp"
+                                        android:paddingTop="@dimen/_15sdp">
+
+                                        <com.pubgplay.app.customview.CTextView
+                                            android:id="@+id/current_balance"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="200 Rs."
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_22sdp" />
+
+                                        <com.pubgplay.app.customview.CTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/current_balance"
+                                            android:text="Current Balance"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <com.pubgplay.app.customview.CTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/_10sdp"
+                                            android:background="@drawable/cashout_btn_bg"
+                                            android:paddingBottom="@dimen/_7sdp"
+                                            android:paddingLeft="@dimen/_15sdp"
+                                            android:paddingRight="@dimen/_15sdp"
+                                            android:paddingTop="@dimen/_7sdp"
+                                            android:text="Cashout"
+                                            android:textColor="@color/color_white" />
+
+                                    </RelativeLayout>
+
+                                </android.support.v7.widget.CardView>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_3sdp"
+                                    android:background="@color/app_bg_color"
+                                    android:visibility="gone" />
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    app:cardCornerRadius="@dimen/_5sdp">
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/dailey_bonus_history"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/_5sdp" />
+
+                                </android.support.v7.widget.CardView>
+                -->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/mainPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tabLayout_main" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

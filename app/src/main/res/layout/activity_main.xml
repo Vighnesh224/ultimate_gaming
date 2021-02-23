@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg_color"
+        tools:context=".activity.MainActivity">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/main_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view">
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_above="@id/bottom_navigation"
+            android:background="#e4e4e4" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_percentage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_home"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_percentage" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gift"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_gift" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_upload"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_gamelist" />
+
+            <LinearLayout
+                android:id="@+id/ll_wallate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_chat"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_wallate" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_me"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_profile" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mainPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/divider"
+            android:layout_below="@+id/rel_main_header"
+            android:visibility="gone" />
+
+        <!--
+                <com.flyco.tablayout.CommonTabLayout
+                    android:id="@+id/tabLayout_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_white"
+                    app:tl_iconGravity="TOP"
+                    app:tl_iconHeight="30dp"
+                    app:tl_iconMargin="0dp"
+                    app:tl_iconWidth="30dp"
+                    app:tl_indicator_anim_enable="true"
+                    app:tl_indicator_bounce_enable="true"
+                    app:tl_indicator_color="@color/colorPrimary"
+                    app:tl_indicator_corner_radius="3.5dp"
+                    app:tl_indicator_gravity="BOTTOM"
+                    app:tl_indicator_height="2dp"
+                    app:tl_textAllCaps="true"
+                    app:tl_textBold="BOTH"
+                    app:tl_textSelectColor="@color/colorPrimary"
+                    app:tl_textUnselectColor="@color/unselected_tab_color"
+                    app:tl_textsize="10sp" />
+        -->
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tabLayout_main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_white"
+            android:visibility="gone"
+            app:tl_iconGravity="TOP"
+            app:tl_iconHeight="25dp"
+            app:tl_iconMargin="5dp"
+            app:tl_iconWidth="25dp"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="true"
+            app:tl_indicator_color="@color/colorPrimary"
+            app:tl_indicator_corner_radius="3.5dp"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_margin_bottom="0dp"
+            app:tl_textAllCaps="true"
+            app:tl_textBold="BOTH"
+            app:tl_textSelectColor="@color/colorPrimary"
+            app:tl_textUnselectColor="@color/unselected_tab_color"
+            app:tl_textsize="10sp" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/tab_layout"
+            android:background="@color/light_gray" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:visibility="gone"
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_white"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            app:tabIndicatorColor="@android:color/transparent" />
+
+    </RelativeLayout>
+</layout>

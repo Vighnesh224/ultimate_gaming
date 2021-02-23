@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="bottom"
+    android:paddingBottom="@dimen/_25sdp">
+
+   <RelativeLayout
+       android:layout_alignParentBottom="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:id="@+id/imgClose"
+           android:layout_centerHorizontal="true"
+           android:layout_width="@dimen/_25sdp"
+           android:layout_height="@dimen/_25sdp"
+           android:src="@drawable/img_close"/>
+
+       <androidx.cardview.widget.CardView
+           app:cardBackgroundColor="@color/white"
+           android:layout_below="@+id/imgClose"
+           app:cardUseCompatPadding="true"
+           android:layout_centerHorizontal="true"
+           android:layout_width="@dimen/_200sdp"
+           android:layout_height="wrap_content"
+           android:minHeight="@dimen/_200sdp"
+           android:layout_gravity="center"
+           android:layout_marginLeft="@dimen/_7sdp"
+           android:layout_marginRight="@dimen/_7sdp"
+           android:layout_marginTop="@dimen/_5sdp"
+           app:cardCornerRadius="@dimen/_10sdp"
+           app:cardElevation="@dimen/_2sdp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:background="@color/selectTab"
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:padding="@dimen/_5sdp">
+
+                   <com.prisminfoways.ultimate.customview.CTextViewBold
+                       android:id="@+id/txt_gamelist"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="PRIZE POOL"
+                       android:textColor="@android:color/white"
+                       android:textSize="@dimen/_15sdp" />
+
+
+                   <com.prisminfoways.ultimate.customview.CTextView
+                       android:layout_marginBottom="@dimen/_5sdp"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:id="@+id/txtGameDetails"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:textAllCaps="true"
+                       android:textColor="@android:color/white"
+                       android:textSize="@dimen/_12sdp" />
+
+               </LinearLayout>
+
+               <RelativeLayout
+                   android:background="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <LinearLayout
+                       android:layout_centerHorizontal="true"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:orientation="vertical">
+
+                       <com.prisminfoways.ultimate.customview.CTextView
+                           android:layout_gravity="center"
+                           android:layout_marginTop="@dimen/_15sdp"
+                           android:id="@+id/txtWinnerDetails"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:text="Winner - "
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_15sdp" />
+
+                       <com.prisminfoways.ultimate.customview.CTextView
+                           android:layout_gravity="center"
+                           android:layout_marginBottom="@dimen/_5sdp"
+                           android:id="@+id/txtKillDetails"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:text="Per Kill -"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_15sdp" />
+
+                       <com.prisminfoways.ultimate.customview.CTextView
+                           android:layout_gravity="center"
+                           android:layout_marginBottom="@dimen/_5sdp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:text="- - - - - - - - - - -"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_15sdp" />
+
+                       <com.prisminfoways.ultimate.customview.CTextView
+                           android:layout_gravity="center"
+                           android:layout_marginBottom="@dimen/_30sdp"
+                           android:id="@+id/txtTotalPrize"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:text="Total Prize -"
+                           android:textColor="@color/black"
+                           android:textSize="@dimen/_15sdp" />
+
+                   </LinearLayout>
+               </RelativeLayout>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+   </RelativeLayout>
+</RelativeLayout>
